@@ -1,6 +1,10 @@
 package Retrieving_API_Keys.testCases;
 
-import Retrieving_API_Keys.utilities.ReadConfig;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Parameters;
+import utilities.ReadConfig;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,17 +25,26 @@ public class BaseClass {
 
     public Logger logger;
 
+    @Parameters("browser")
     @BeforeClass
-    public void setup()
+    public void setup(String br)
     {
-        driver = new ChromeDriver();
+        switch(br.toLowerCase())
+        {
+            case "chrome":  driver = new ChromeDriver(); break;
+            case "edge": driver = new EdgeDriver(); break;
+            case "firefox": driver = new FirefoxDriver(); break;
+            default: System.out.println("Invalid browser");
+        }
         driver.get(baseURL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         logger = LogManager.getLogger(this.getClass());
+
+
     }
 
-    @AfterClass
+    //@AfterClass
     public void teardown()
     {
         driver.quit();

@@ -1,2 +1,5 @@
-09:16:15.668 [main] INFO  Retrieving_API_Keys.testCases.TC001_SignUp - SignUp Successful
-09:33:34.333 [main] INFO  Retrieving_API_Keys.testCases.TC002_Login - Login Successful
+09:08:35.462 [main] INFO  Retrieving_API_Keys.testCases.TC003_GenerateAPIKey - Login Successful
+09:09:19.512 [main] INFO  Retrieving_API_Keys.testCases.TC003_GenerateAPIKey - App Created Successfully
+09:09:24.523 [main] INFO  Retrieving_API_Keys.testCases.TC003_GenerateAPIKey - Retrieving App Data
+09:09:24.556 [main] INFO  Retrieving_API_Keys.testCases.TC003_GenerateAPIKey - Copying Data to ClipBoard
+09:09:24.694 [main] INFO  Retrieving_API_Keys.testCases.TC003_GenerateAPIKey - ApiKey: sk_live_NOsySwYtHrNFLpIZlMgAqKdH02U3r7Ho4UpZabHr

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="utilities.ExtentReportsManager"></listener>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="C:/Users/CHARLIE/3D Objects/Lendsqr Adjutor APIs">
+        <parameter name="browser" value="chrome"></parameter>
+
+        <classes>
+<!--            <class name="Retrieving_API_Keys.testCases.TC001_SignUp"> </class>-->
+<!--            <class name="Retrieving_API_Keys.testCases.TC002_Login"> </class>-->
+            <class name="Retrieving_API_Keys.testCases.TC003_GenerateAPIKey"> </class>
+
+        </classes>
+    </test>
+</suite>

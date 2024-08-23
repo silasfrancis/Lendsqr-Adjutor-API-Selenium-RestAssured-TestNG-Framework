@@ -1,4 +1,4 @@
-package Retrieving_API_Keys.utilities;
+package utilities;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -30,14 +30,9 @@ public class ExtentReportsManager implements ITestListener {
 
         sparkReporter=new ExtentSparkReporter(".\\reports\\"+repName);
 
-        sparkReporter.config().setDocumentTitle("Lendsq_Adjutor APIs"); // Title of report
+        sparkReporter.config().setDocumentTitle("Lendsqr_Adjutor APIs"); // Title of report
         sparkReporter.config().setReportName("Test Execution Results"); // name of the report
         sparkReporter.config().setTheme(Theme.DARK);
-//            try {
-//                sparkReporter.loadXMLConfig(".\\src\\test\\resources\\extent-config.xml");
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
 
         extent=new ExtentReports();
         extent.attachReporter(sparkReporter);

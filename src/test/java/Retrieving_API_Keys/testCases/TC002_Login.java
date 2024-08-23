@@ -16,7 +16,7 @@ public class TC002_Login extends BaseClass{
         if(lp.confirmLogin().isDisplayed())
         {
             Assert.assertTrue(true);
-            logger.info("Login Successful");
+            //logger.info("Login Successful");
         }
     }
 }
