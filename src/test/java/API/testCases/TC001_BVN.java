@@ -30,12 +30,11 @@ public class TC001_BVN extends BaseClass{
 
         logger.info("Initializing BVN consent");
         Response response = BvnEndPoints.InitializeBVN(contact, bvn);
-        response.then().log().all();
 
         Assert.assertEquals(response.getStatusCode(), 200);
-
         Assert.assertEquals(response.jsonPath().get("status").toString(), "otp");
         Assert.assertEquals(response.jsonPath().get("message").toString(), "Please provide OTP sent to contact");
+        response.then().log().all();
         logger.info("otp sent to customer");
     }
 
@@ -46,9 +45,10 @@ public class TC001_BVN extends BaseClass{
         otp.put("otp",randomNumber(6));
 
         Response response = BvnEndPoints.getBVNDetails(otp, bvn);
-        response.then().log().all();
+
         Assert.assertEquals(response.getStatusCode(), 200);
         Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
+        response.then().log().all();
 
     }
 
@@ -60,11 +60,11 @@ public class TC001_BVN extends BaseClass{
 
         logger.info("Initializing BVN account consent");
         Response response = BvnEndPoints.InitializeBVNAccounts(contact, bvn);
-        response.then().log().all();
 
         Assert.assertEquals(response.getStatusCode(), 200);
         Assert.assertEquals(response.jsonPath().get("status").toString(), "otp");
         Assert.assertEquals(response.jsonPath().get("message").toString(), "Please provide OTP sent to contact");
+        response.then().log().all();
         logger.info("otp sent to customer");
     }
 }

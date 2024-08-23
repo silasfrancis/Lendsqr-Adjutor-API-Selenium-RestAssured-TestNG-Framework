@@ -26,7 +26,7 @@ public class ExtentReportsManager implements ITestListener {
     public void onStart(ITestContext testContext)
     {
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());//time stamp
-        repName="API-Test-Report-"+timeStamp+".html";
+        repName="Test-Report-"+timeStamp+".html";
 
         sparkReporter=new ExtentSparkReporter(".\\reports\\"+repName);
 

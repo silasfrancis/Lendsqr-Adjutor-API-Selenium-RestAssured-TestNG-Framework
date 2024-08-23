@@ -10,5 +10,9 @@ public class Routes{
     public static String put_getBvndetails = Api_baseURL + "verification/bvn/{bvn}";
     public static String post_initalize_bvnAccounts = Api_baseURL + "verification/bvn/{bvn}/accounts";
 
+//    Credit Bureaus
+    public static String get_creditReportCRC = Api_baseURL + "creditbureaus/crc/{bvn}";
+    public static String get_creditReportFirstCentral = Api_baseURL + "creditbureaus/firstcentral/{bvn}";
+
 
 }

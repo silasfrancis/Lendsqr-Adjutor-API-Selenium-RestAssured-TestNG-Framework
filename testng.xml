@@ -19,6 +19,7 @@
     <test verbose="2" preserve-order="true" name="Lendsqr Adjutor APIs">
         <classes>
             <class name="API.testCases.TC001_BVN"> </class>
+            <class name="API.testCases.TC002_CreditBureaus"> </class>
 
         </classes>
     </test>
