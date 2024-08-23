@@ -3,3 +3,6 @@
 09:09:24.523 [main] INFO  Retrieving_API_Keys.testCases.TC003_GenerateAPIKey - Retrieving App Data
 09:09:24.556 [main] INFO  Retrieving_API_Keys.testCases.TC003_GenerateAPIKey - Copying Data to ClipBoard
 09:09:24.694 [main] INFO  Retrieving_API_Keys.testCases.TC003_GenerateAPIKey - ApiKey: sk_live_NOsySwYtHrNFLpIZlMgAqKdH02U3r7Ho4UpZabHr
+16:11:19.976 [main] INFO  API.testCases.TC001_BVN - Initializing BVN consent
+16:13:32.554 [main] INFO  API.testCases.TC001_BVN - Initializing BVN consent
+16:15:22.159 [main] INFO  API.testCases.TC001_BVN - Initializing BVN account consent

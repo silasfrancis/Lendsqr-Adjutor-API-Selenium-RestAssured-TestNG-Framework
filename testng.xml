@@ -11,7 +11,14 @@
         <classes>
 <!--            <class name="Retrieving_API_Keys.testCases.TC001_SignUp"> </class>-->
 <!--            <class name="Retrieving_API_Keys.testCases.TC002_Login"> </class>-->
-            <class name="Retrieving_API_Keys.testCases.TC003_GenerateAPIKey"> </class>
+<!--            <class name="Retrieving_API_Keys.testCases.TC003_GenerateAPIKey"> </class>-->
+
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Lendsqr Adjutor APIs">
+        <classes>
+            <class name="API.testCases.TC001_BVN"> </class>
 
         </classes>
     </test>
