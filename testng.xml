@@ -20,6 +20,7 @@
         <classes>
             <class name="API.testCases.TC001_BVN"> </class>
             <class name="API.testCases.TC002_CreditBureaus"> </class>
+            <class name="API.testCases.TC003_Decisioning"> </class>
 
         </classes>
     </test>
