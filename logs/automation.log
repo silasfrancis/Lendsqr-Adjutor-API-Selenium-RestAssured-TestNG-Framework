@@ -6,3 +6,56 @@
 16:11:19.976 [main] INFO  API.testCases.TC001_BVN - Initializing BVN consent
 16:13:32.554 [main] INFO  API.testCases.TC001_BVN - Initializing BVN consent
 16:15:22.159 [main] INFO  API.testCases.TC001_BVN - Initializing BVN account consent
+01:26:19.916 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:26:30.882 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:26:31.054 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:29:30.874 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:29:37.738 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:29:37.879 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:32:10.744 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:32:18.460 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:33:33.535 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:33:41.064 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:34:32.479 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:34:39.260 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:34:42.772 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:36:06.044 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:36:13.398 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:36:13.523 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:38:04.828 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:38:11.899 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:38:12.008 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:40:57.905 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:41:06.739 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:41:06.911 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:45:38.911 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:45:46.022 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:45:46.163 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:47:01.554 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:47:08.825 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:47:08.965 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:47:11.722 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Details Displayed
+01:48:39.714 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:48:48.370 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:48:48.502 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:51:17.677 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:51:25.959 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:51:26.115 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:53:40.701 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:53:52.653 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:53:52.935 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:56:49.579 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+01:57:02.646 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+01:57:02.818 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+01:57:09.067 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Details Displayed
+02:05:16.539 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+02:05:23.678 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+02:05:24.022 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+02:05:25.535 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Details Displayed
+02:07:18.484 [main] INFO  API.testCases.TC002_CreditBureaus - Fetching Credit Report from CRC Credit Bureau
+02:07:25.170 [main] INFO  API.testCases.TC002_CreditBureaus - Credit Report Displayed
+02:07:25.186 [main] INFO  API.testCases.TC002_CreditBureaus - Fetching Credit Report from FirstCentral Credit Bureau
+02:08:12.586 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+02:08:19.329 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+02:08:19.469 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+02:08:22.396 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Details Displayed

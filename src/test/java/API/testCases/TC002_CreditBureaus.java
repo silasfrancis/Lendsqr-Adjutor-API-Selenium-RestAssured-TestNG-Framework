@@ -11,25 +11,19 @@ import org.testng.annotations.Test;
 
 public class TC002_CreditBureaus extends BaseClass{
 
-    Logger logger;
-
-    @BeforeClass
-    public void setupData()
-    {
-        logger = LogManager.getLogger(this.getClass());
-    }
+    Logger logger = LogManager.getLogger(this.getClass());
 
     @Test(priority= 1)
     public void GetCRCReport()
     {
         logger.info("Fetching Credit Report from CRC Credit Bureau");
         Response response = CreditBureausEndPoints.GetCRCReport(bvn);
+        response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
         Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
         Assert.assertEquals(response.jsonPath().get("message").toString(), "Successful");
         Assert.assertEquals(response.jsonPath().get("data.nano_consumer_profile.consumer_details.identification[0].id_value").toString(), bvn);
         Assert.assertEquals(response.jsonPath().get("data.nano_consumer_profile.consumer_details.identification[0].source_id").toString(), "BVN");
-        response.then().log().all();
         logger.info("Credit Report Displayed");
     }
 
@@ -38,10 +32,9 @@ public class TC002_CreditBureaus extends BaseClass{
     {
         logger.info("Fetching Credit Report from FirstCentral Credit Bureau");
         Response response = CreditBureausEndPoints.GetFirstCentralReport(bvn);
-
+        response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
         Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
         Assert.assertEquals(response.jsonPath().get("message").toString(), "Successful");
-        response.then().log().all();
     }
 }
