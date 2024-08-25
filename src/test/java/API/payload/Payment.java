@@ -5,15 +5,6 @@ public class Payment {
     String description;
     String organization_id;
     String callback_url;
-    String reference;
-
-    public String getReference() {
-        return reference;
-    }
-
-    public void setReference(String reference) {
-        this.reference = reference;
-    }
 
     public int getAmount() {
         return amount;

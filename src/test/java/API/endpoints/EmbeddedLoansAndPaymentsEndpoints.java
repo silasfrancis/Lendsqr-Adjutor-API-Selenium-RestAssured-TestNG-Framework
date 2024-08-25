@@ -1,10 +1,8 @@
 package API.endpoints;
 
-import API.payload.Loans;
 import API.payload.Payment;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.json.JSONObject;
 
 import static io.restassured.RestAssured.given;
 
@@ -19,7 +17,7 @@ public class EmbeddedLoansAndPaymentsEndpoints extends Routes {
         return response;
     }
 
-    public static Response InitializeLoanApp(JSONObject payload)
+    public static Response InitializeLoanApp(String payload)
     {
         Response response= given()
                 .contentType(ContentType.JSON)
