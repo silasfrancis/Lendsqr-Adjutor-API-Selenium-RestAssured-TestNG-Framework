@@ -1,10 +1,9 @@
 package Retrieving_API_Keys.testCases;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Parameters;
-import utilities.ReadConfig;
+import Retrieving_API_Keys.Configuration.ReadConfig;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

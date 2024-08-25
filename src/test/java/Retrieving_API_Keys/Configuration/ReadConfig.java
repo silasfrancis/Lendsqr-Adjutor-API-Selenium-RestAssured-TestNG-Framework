@@ -1,4 +1,4 @@
-package utilities;
+package Retrieving_API_Keys.Configuration;
 
 import java.io.File;
 import java.io.FileInputStream;

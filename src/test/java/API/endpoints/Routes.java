@@ -19,6 +19,16 @@ public class Routes{
     public static String get_decisionModelsDetails = Api_baseURL+ "decisioning/models/{id}/settings";
     public static String post_Oraculi_Borrower_Scoring = Api_baseURL+ "decisioning/models/{id}";
 
+//    Embedded Loans And Payments
+//    Loans
+    public static String get_loanProducts = Api_baseURL + "loans/products";
+    public static String post_initializeLoanApplication = Api_baseURL + "loans/initialize";
+    public static String get_loan = Api_baseURL + "loans/{reference}";
+
+//    payment
+    public static String post_initailizePayment = Api_baseURL + "payments/initialize";
+    public static String get_QueryPayment = Api_baseURL + "payments/{reference}";
+
 
 
 }

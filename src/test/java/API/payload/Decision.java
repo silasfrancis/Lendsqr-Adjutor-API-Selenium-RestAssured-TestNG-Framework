@@ -190,13 +190,5 @@ public class Decision {
         String office_email;
         String personal_email;
         String amount;
-        int id;
 
-        public int getId() {
-                return id;
-        }
-
-        public void setId(int id) {
-                this.id = id;
-        }
 }

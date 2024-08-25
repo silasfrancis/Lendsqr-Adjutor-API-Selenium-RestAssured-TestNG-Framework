@@ -2,20 +2,20 @@ package API.testCases;
 
 import API.endpoints.DecisioningEndpoints;
 import API.payload.Decision;
+import API.payload.DecisioningID;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TC003_Decisioning extends BaseClass{
 
     Logger logger= LogManager.getLogger(this.getClass());
     Decision decision;
+    DecisioningID ID;
     Faker faker;
 
     @BeforeClass
@@ -59,14 +59,15 @@ public class TC003_Decisioning extends BaseClass{
         logger.info("Decisioning Models Displayed");
 
         int id= Integer.parseInt(response.jsonPath().get("data[0].id").toString());
-        decision.setId(id);
+        ID = new DecisioningID();
+        ID.setId(id);
     }
 
     @Test(priority= 2)
     public void GetDecisionModelsDetails()
     {
         logger.info("Fetching Decisioning Models Details");
-        Response response = DecisioningEndpoints.GetDecisionModelsDetails(decision.getId());
+        Response response = DecisioningEndpoints.GetDecisionModelsDetails(ID.getId());
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
         Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
@@ -80,7 +81,7 @@ public class TC003_Decisioning extends BaseClass{
     @Test(priority = 3)
     public void OraculiBorrowerScoring()
     {
-        Response response = DecisioningEndpoints.OraculiBorrowerScoring(decision, decision.getId());
+        Response response = DecisioningEndpoints.OraculiBorrowerScoring(decision, ID.getId());
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
         Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
