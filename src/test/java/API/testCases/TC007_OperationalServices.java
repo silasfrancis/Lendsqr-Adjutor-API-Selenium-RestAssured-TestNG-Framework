@@ -18,6 +18,7 @@ public class TC007_OperationalServices {
         Response response = OperationalServicesEndpoints.GetAdutorPricing();
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.jsonPath().get("status").toString(),("success"));
         logger.info("GetAdutorPricing test successful");
     }
 
@@ -28,6 +29,7 @@ public class TC007_OperationalServices {
         Response response = OperationalServicesEndpoints.GetWallet();
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.jsonPath().get("status").toString(),("success"));
         logger.info("GetWallet test successful");
 
     }
@@ -39,6 +41,7 @@ public class TC007_OperationalServices {
         Response response = OperationalServicesEndpoints.GetBankList();
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.jsonPath().get("status").toString(),("success"));
         logger.info("GetBankList test Successful");
 
     }

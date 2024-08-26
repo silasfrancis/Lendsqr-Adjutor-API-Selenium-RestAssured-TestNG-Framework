@@ -1,6 +1,7 @@
 package API.testCases;
 
 import API.endpoints.DirectDebitEndpoints;
+import API.payload.BankingDetails;
 import API.payload.Mandate;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
@@ -12,6 +13,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 public class TC008_DirectDebit extends BaseClass{
+    BankingDetails details = new BankingDetails();
     Mandate mandate;
     Faker faker;
     Logger logger = LogManager.getLogger(this.getClass());
@@ -23,8 +25,10 @@ public class TC008_DirectDebit extends BaseClass{
         Response response = DirectDebitEndpoints.GetAllBanks();
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
-        String bank_id= response.jsonPath().get("data.bank_id").toString();
-        context.setAttribute("bank_id", bank_id);
+        Assert.assertEquals(response.jsonPath().get("status").toString(),("success"));
+//        Assert.assertEquals(response.jsonPath().get("data.data[18].name").toString(), "Zenith Bank");
+//        String bank_id= response.jsonPath().get("data.data[18].bank_id").toString();
+//        context.setAttribute("bank_id", bank_id);
         logger.info("GetAllBanks test successful");
     }
 
@@ -32,24 +36,30 @@ public class TC008_DirectDebit extends BaseClass{
     public void GetBankDetails(ITestContext context) {
         logger.info("Starting GetBankDetails test");
 
-        String bankID = (String) context.getAttribute("bank_id");
-        Response response = DirectDebitEndpoints.GetBankDetails(bankID);
+        //String bankID = (String) context.getAttribute("bank_id");
+        Response response = DirectDebitEndpoints.GetBankDetails(41);
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.jsonPath().get("status").toString(),("success"));
         logger.info("GetBankDetails test successful");
+
+        String bank_code= response.jsonPath().get("data.bank_code").toString();
+        details.setBankcode(bank_code);
     }
 
-    @Test(priority = 3)
+   @Test(priority = 3)
     public void VerifyAccountNumber()
     {
         logger.info("Starting VerifyAccountNumber test");
         JSONObject data = new JSONObject();
-        data.put("account_number", "");
-        data.put("bank_code", "");
+        data.put("account_number", "1130009156");
+        data.put("bank_code", details.getBankcode());
 
         Response response = DirectDebitEndpoints.VerifyAccountNumber(data.toString());
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.jsonPath().get("status").toString(),("success"));
+        Assert.assertEquals(response.jsonPath().get("data.account_name").toString(),("RVSG PAYDIRECT COLLECTION A/C"));
         logger.info("VerifyAccountNumber test successful");
     }
 
@@ -58,13 +68,13 @@ public class TC008_DirectDebit extends BaseClass{
     {
         faker =new Faker();
         mandate = new Mandate();
-        mandate.setAccount_number("");
-        mandate.setPhone_number("");
-        mandate.setDebit_type("");
-        mandate.setBank_code("");
+        mandate.setAccount_number("1130009156");
+        mandate.setPhone_number("080"+randomString(8));
+        mandate.setDebit_type("all");
+        mandate.setBank_code(this.details.getBankcode());
         mandate.setEmail(faker.internet().emailAddress());
-        mandate.setStart_date("2024-05-01");
-        mandate.setEnd_date("2024-08-01");
+        mandate.setStart_date("2024-09-26");
+        mandate.setEnd_date("2025-12-31");
         mandate.setNarration(randomString(20));
         mandate.setAddress(faker.address().fullAddress());
         mandate.setAmount(Integer.parseInt(randomNumber(5)));
@@ -74,17 +84,21 @@ public class TC008_DirectDebit extends BaseClass{
         Response response = DirectDebitEndpoints.CreateMandate(mandate);
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.jsonPath().get("status").toString(),("success"));
+        String reference = response.jsonPath().get("data.reference_number").toString();
+        System.out.println(reference);
+        details.setReference(reference);
         logger.info("CreateMandate test successful");
     }
 
-    @Test(priority = 5)
+   @Test(priority = 5)
     public void GetAllMandates(ITestContext context) {
 
         logger.info("Starting GetAllMandates test");
-        String bankID = (String) context.getAttribute("bank_id");
         Response response = DirectDebitEndpoints.GetAllMandates();
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.jsonPath().get("status").toString(),("success"));
         logger.info("GetAllMandates test successful");
     }
 
@@ -92,9 +106,9 @@ public class TC008_DirectDebit extends BaseClass{
     public void DebitMandate()
     {
         JSONObject data = new JSONObject();
-        data.put("reference_number", "");
-        data.put("amount", "");
-        data.put("narration", "");
+        data.put("reference_number", this.details.getReference());
+        data.put("amount", Integer.parseInt(randomNumber(5)));
+        data.put("narration", "This is a test");
 
         logger.info("Starting DebitMandate test");
 
@@ -108,7 +122,7 @@ public class TC008_DirectDebit extends BaseClass{
     public void CheckAccountBalance()
     {
         JSONObject data = new JSONObject();
-        data.put("reference_number", "");
+        data.put("reference_number", this.details.getReference());
 
         logger.info("Starting CheckAccountBalance test");
 

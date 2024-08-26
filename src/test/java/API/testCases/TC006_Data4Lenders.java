@@ -18,6 +18,7 @@ public class TC006_Data4Lenders{
         Response response = Data4LendersEndPoints.GetOptions();
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.jsonPath().get("success").toString(),("true"));
         logger.info("GetOptions Successful");
 
     }
@@ -30,6 +31,7 @@ public class TC006_Data4Lenders{
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
         logger.info("GetUsers successful");
+        Assert.assertEquals(response.jsonPath().get("success").toString(),("true"));
 
     }
 }

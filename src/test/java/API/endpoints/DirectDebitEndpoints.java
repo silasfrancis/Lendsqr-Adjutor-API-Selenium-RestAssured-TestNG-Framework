@@ -22,7 +22,7 @@ public class DirectDebitEndpoints extends Routes{
         return response;
     }
 
-    public static Response GetBankDetails(String bankID)
+    public static Response GetBankDetails(int bankID)
     {
         Response response = given()
                 .header("Authorization", ApiKey)
