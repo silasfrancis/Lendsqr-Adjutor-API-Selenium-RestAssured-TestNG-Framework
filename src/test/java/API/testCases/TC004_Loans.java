@@ -19,13 +19,14 @@ public class TC004_Loans extends BaseClass{
     public void GetLoanProducts(ITestContext context)
     {
         logger.info("Getting Loan Products");
-            Response response = EmbeddedLoansAndPaymentsEndpoints.GetLoanProducts();
-            response.then().log().all();
-            Assert.assertEquals(response.getStatusCode(), 200);
-            logger.info("Loan Products Displayed");
-            Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
-            String product_id= response.jsonPath().get("data[0].product_id").toString();
-            context.setAttribute("productID", product_id);
+        Response response = EmbeddedLoansAndPaymentsEndpoints.GetLoanProducts();
+        response.then().log().all();
+        Assert.assertEquals(response.getStatusCode(), 200);
+        logger.info("Loan Products Displayed");
+        Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
+        String product_id= response.jsonPath().get("data[0].product_id").toString();
+        context.setAttribute("productID", product_id);
+        logger.info("Loan Products Displayed");
 
     }
 
@@ -48,6 +49,7 @@ public class TC004_Loans extends BaseClass{
         Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
         String reference= response.jsonPath().get("data.reference").toString();
         context.setAttribute("reference", reference);
+        logger.info("InitializeLoanApp Test passed");
     }
 
     @Test(priority = 3)
@@ -57,6 +59,7 @@ public class TC004_Loans extends BaseClass{
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
         Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
+        logger.info("GetLoan Test Passed");
     }
 
 }
