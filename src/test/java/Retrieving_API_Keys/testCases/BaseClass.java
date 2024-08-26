@@ -33,7 +33,7 @@ public class BaseClass {
             case "chrome":  driver = new ChromeDriver(); break;
             case "edge": driver = new EdgeDriver(); break;
             case "firefox": driver = new FirefoxDriver(); break;
-            default: System.out.println("Invalid browser");
+            default: driver = new ChromeDriver();
         }
         driver.get(baseURL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
