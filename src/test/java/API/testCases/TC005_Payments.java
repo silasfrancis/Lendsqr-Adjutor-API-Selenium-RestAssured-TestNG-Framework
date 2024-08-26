@@ -5,7 +5,6 @@ import API.payload.Payment;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.ITestContext;
-import org.testng.ITestListener;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -30,6 +29,7 @@ public class TC005_Payments extends BaseClass{
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
         String reference= response.jsonPath().get("data.reference").toString();
+        Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
         context.setAttribute("reference", reference);
 
     }
@@ -40,5 +40,7 @@ public class TC005_Payments extends BaseClass{
         String reference = (String) context.getAttribute("reference");
         Response response = EmbeddedLoansAndPaymentsEndpoints.QueryPayment(reference);
         Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.jsonPath().get("status").toString(), "success");
+        response.then().log().all();
     }
 }

@@ -126,7 +126,7 @@ public class TC003_GenerateAPIKey extends BaseClass{
         JSONArray jsonArray = new JSONArray();
         jsonArray.put(jsonObject);
 
-        try (FileWriter fileWriter = new FileWriter("ApiKey.json")) {
+        try (FileWriter fileWriter = new FileWriter(".\\Retrieving_API_Keys\\ApiKey.json")) {
             fileWriter.write(jsonArray.toString());
         } catch (Exception e) {
             e.printStackTrace();
