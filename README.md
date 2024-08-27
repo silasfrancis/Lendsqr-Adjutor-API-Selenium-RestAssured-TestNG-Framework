@@ -18,7 +18,7 @@ This project involves the testing of the Adjutor Web Application and API using S
 ##  Test Execution
 
 - Tests can be executed by running the "**testng.xml**" file
-- Test can also be executed by changing to project directory and running the "**run.bat**" file
+- Test can also be executed by changing to project directory and running the "**run.bat**" file via command prompt.
   ####   Prerequisite
   
   Save the "pom.xml" file and ensure all dependencies and builds have been installed
