@@ -26,3 +26,4 @@ This project involves the testing of the Adjutor Web Application and API using S
 ## Test Execution Report 
 
 This can be found in the "report" directory.
+![image](https://github.com/user-attachments/assets/fa34541d-1eb5-4236-b29e-1572e1075aad)
