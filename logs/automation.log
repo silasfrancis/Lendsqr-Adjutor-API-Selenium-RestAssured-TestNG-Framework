@@ -316,3 +316,45 @@
 14:17:53.390 [main] INFO  API.testCases.TC008_DirectDebit - GetAllMandates test successful
 14:17:53.390 [main] INFO  API.testCases.TC008_DirectDebit - Starting DebitMandate test
 14:17:54.812 [main] INFO  API.testCases.TC008_DirectDebit - Starting CheckAccountBalance test
+10:00:32.556 [main] INFO  API.testCases.TC001_BVN - Initializing BVN consent
+10:01:44.233 [main] INFO  API.testCases.TC001_BVN - otp sent to customer
+10:01:59.642 [main] INFO  API.testCases.TC001_BVN - Initializing BVN account consent
+10:03:01.406 [main] INFO  API.testCases.TC002_CreditBureaus - Fetching Credit Report from CRC Credit Bureau
+10:03:04.631 [main] INFO  API.testCases.TC002_CreditBureaus - Credit Report Displayed
+10:03:04.647 [main] INFO  API.testCases.TC002_CreditBureaus - Fetching Credit Report from FirstCentral Credit Bureau
+10:03:09.849 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models
+10:03:12.230 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Displayed
+10:03:12.450 [main] INFO  API.testCases.TC003_Decisioning - Fetching Decisioning Models Details
+10:03:14.640 [main] INFO  API.testCases.TC003_Decisioning - Decisioning Models Details Displayed
+10:03:19.674 [main] INFO  API.testCases.TC004_Loans - Getting Loan Products
+10:03:21.758 [main] INFO  API.testCases.TC004_Loans - Loan Products Displayed
+10:03:21.852 [main] INFO  API.testCases.TC004_Loans - Loan Products Displayed
+10:03:21.961 [main] INFO  API.testCases.TC004_Loans - Initializing Loan Application
+10:03:26.971 [main] INFO  API.testCases.TC004_Loans - InitializeLoanApp Test passed
+10:03:34.997 [main] INFO  API.testCases.TC004_Loans - GetLoan Test Passed
+10:03:34.997 [main] INFO  API.testCases.TC005_Payments - Starting InitializePayment test
+10:03:37.934 [main] INFO  API.testCases.TC005_Payments - InitializePayment successful
+10:03:37.949 [main] INFO  API.testCases.TC005_Payments - Starting QueryPayment test
+10:03:39.471 [main] INFO  API.testCases.TC005_Payments - QueryPayment successful
+10:03:39.471 [main] INFO  API.testCases.TC006_Data4Lenders - Starting GetOptions test
+10:03:41.187 [main] INFO  API.testCases.TC006_Data4Lenders - GetOptions Successful
+10:03:41.202 [main] INFO  API.testCases.TC006_Data4Lenders - Starting GetUsers test
+10:03:50.840 [main] INFO  API.testCases.TC006_Data4Lenders - GetUsers successful
+10:03:51.506 [main] INFO  API.testCases.TC007_OperationalServices - Starting GetAdutorPricing test
+10:04:01.721 [main] INFO  API.testCases.TC007_OperationalServices - GetAdutorPricing test successful
+10:04:01.721 [main] INFO  API.testCases.TC007_OperationalServices - Starting GetWallet test
+10:04:04.348 [main] INFO  API.testCases.TC007_OperationalServices - GetWallet test successful
+10:04:04.348 [main] INFO  API.testCases.TC007_OperationalServices - Starting GetBankList test
+10:04:06.237 [main] INFO  API.testCases.TC007_OperationalServices - GetBankList test Successful
+10:04:06.237 [main] INFO  API.testCases.TC008_DirectDebit - Starting GetAllBanks test
+10:04:07.997 [main] INFO  API.testCases.TC008_DirectDebit - GetAllBanks test successful
+10:04:07.997 [main] INFO  API.testCases.TC008_DirectDebit - Starting GetBankDetails test
+10:04:12.002 [main] INFO  API.testCases.TC008_DirectDebit - GetBankDetails test successful
+10:04:12.034 [main] INFO  API.testCases.TC008_DirectDebit - Starting VerifyAccountNumber test
+10:04:15.240 [main] INFO  API.testCases.TC008_DirectDebit - VerifyAccountNumber test successful
+10:04:15.564 [main] INFO  API.testCases.TC008_DirectDebit - Starting CreateMandate test
+10:04:19.831 [main] INFO  API.testCases.TC008_DirectDebit - CreateMandate test successful
+10:04:19.847 [main] INFO  API.testCases.TC008_DirectDebit - Starting GetAllMandates test
+10:04:21.374 [main] INFO  API.testCases.TC008_DirectDebit - GetAllMandates test successful
+10:04:21.390 [main] INFO  API.testCases.TC008_DirectDebit - Starting DebitMandate test
+10:04:26.759 [main] INFO  API.testCases.TC008_DirectDebit - Starting CheckAccountBalance test

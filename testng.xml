@@ -22,7 +22,11 @@
             <class name="API.testCases.TC001_BVN"> </class>
             <class name="API.testCases.TC002_CreditBureaus"> </class>
             <class name="API.testCases.TC003_Decisioning"> </class>
-
+            <class name="API.testCases.TC004_Loans"> </class>
+            <class name="API.testCases.TC005_Payments"> </class>
+            <class name="API.testCases.TC006_Data4Lenders"> </class>
+            <class name="API.testCases.TC007_OperationalServices"> </class>
+            <class name="API.testCases.TC008_DirectDebit"> </class>
         </classes>
     </test>
 
